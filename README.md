@@ -1,6 +1,8 @@
 # IconChanger
 <img width="150" src="https://zupimages.net/up/23/22/f9nt.png" alt="" /></a>
 
+<sub> > Icône par Lynge Pallesen. </sub>
+
 Devenez maître des icônes en quelques clics.
 
 ## ☕️ À propos
