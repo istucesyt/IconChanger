@@ -1,43 +1,76 @@
 repeat
-	set nameList to {"...d'un fichier", "...d'un volume ou un dossier"}
-	set choice to (choose from list the nameList with prompt "Modifier l'icône..." with title "IconChanger") as string
-	if choice is "false" then exit repeat
 	
-	if choice is "...d'un fichier" then
-		set access to choose file with prompt "Sélectionnez le fichier dont vous souhaitez modifier l'icône"
+	display dialog "IconChanger est un logiciel gratuit. Pour plus d’informations sur celui-ci et sur son fonctionnement, consultez le répertoire GitHub du projet." with title "IconChanger" with icon note buttons {"Quitter", "Modifier une icône 🖌", "À propos"} default button 2
+	set choice to button returned of result
+	
+	if choice is "À propos" then
+		display dialog "Version 1.0 build 1 beta
+2023, iStuces
+
+Co-créé par l'intelligence artificielle. 🧠
+Pour toute suggestion ou tout signalement, merci de contacter istucesyt@gmail.com
+Pour bénéficier de toutes les informations sur ce logiciel, et de plus de contenus, rejoignez le serveur Discord d'iStuces :" with title "À propos d'IconChanger" buttons {"Rejoindre le serveur Discord", "Fermer"} with icon note default button 2
+		
+		set choice to button returned of result
+		
+		if choice is "Rejoindre le serveur Discord" then
+			tell application "Safari"
+				activate
+				open location "https://tinyurl.com/iStuces-Discord"
+			end tell
+		end if
 	end if
-	if choice is "...d'un volume ou un dossier" then
-		set access to choose folder with prompt "Sélectionnez le volume ou le dossier dont vous souhaitez modifier l'icône"
+	
+	
+	if choice is "Modifier une icône 🖌" then
+		
+		set nameList to {"...d'un fichier", "...d'un volume ou un dossier"}
+		set choice to (choose from list the nameList with prompt "Modifier l'icône..." with title "IconChanger") as string
+		if choice is "false" then exit repeat
+		
+		if choice is "...d'un fichier" then
+			set access to choose file with prompt "Sélectionnez le fichier dont vous souhaitez modifier l'icône"
+		end if
+		if choice is "...d'un volume ou un dossier" then
+			set access to choose folder with prompt "Sélectionnez le volume ou le dossier dont vous souhaitez modifier l'icône"
+		end if
+		
+		set accessi to choose file with prompt "Sélectionnez l'icône de remplacement"
+		
+		tell application "Finder"
+			set touch to "c"
+			activate
+			open information window of accessi
+			activate
+		end tell
+		
+		
+		tell application "System Events" to tell process "Finder" to tell window 1
+			keystroke tab
+			delay 0.5
+			keystroke (touch & "w") using command down
+			delay 0.5
+		end tell
+		
+		tell application "Finder"
+			set touch to "v"
+			activate
+			open information window of access
+			activate
+		end tell
+		
+		tell application "System Events" to tell process "Finder" to tell window 1
+			keystroke tab
+			keystroke (touch & "w") using command down
+		end tell
+		exit repeat
+		
 	end if
 	
-	set accessi to choose file with prompt "Sélectionnez l'icône de remplacement"
-	
-	tell application "Finder"
-		set touch to "c"
-		activate
-		open information window of accessi
-		activate
-	end tell
-	
-	
-	tell application "System Events" to tell process "Finder" to tell window 1
-		keystroke tab
-		delay 0.5
-		keystroke (touch & "w") using command down
-		delay 0.5
-	end tell
-	
-	tell application "Finder"
-		set touch to "v"
-		activate
-		open information window of access
-		activate
-	end tell
-	
-	tell application "System Events" to tell process "Finder" to tell window 1
-		keystroke tab
-		keystroke (touch & "w") using command down
-	end tell
-	exit repeat
+	if choice is "Quitter" then
+		tell application "IconChanger"
+			quit
+		end tell
+	end if
 	
 end repeat
