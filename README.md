@@ -6,11 +6,7 @@
 Devenez maître des icônes en quelques clics.
 
 ## ☕️ À propos
-IconChanger est un freeware vous permettant de remplacer l'icône d'un fichier, dossier ou volume en quelques clics. Aucune connaissance requise, votre Mac effectue tout le processus de remplacement à votre place.
-
-## 🚀 Prérequis
-L'application nécessite un Mac sous macOS X 10.6 ou ultérieur. Celle-ci est compatible avec Apple Silicon.
-Vous aurez besoin de 3 Mo d'espace disque libre sur votre Mac.
+IconChanger est un script vous permettant de remplacer l'icône d'un fichier, dossier ou volume en quelques clics. Aucune connaissance requise, votre Mac effectue tout le processus de remplacement à votre place.
 
 ## ✉️ Restez informé...
 ...en rejoignant le serveur Discord d'iStuces : https://tinyurl.com/iStuces-Discord
