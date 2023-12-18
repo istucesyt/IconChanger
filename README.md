@@ -12,6 +12,6 @@ IconChanger est un script vous permettant de remplacer automatiquement l'icône 
 Le script peut être exécuté via l'Éditeur de script ou via le Terminal en utilisant la commande `osascript [IconChanger.script]`
 
 ## ✉️ Restez informé...
-...en rejoignant le serveur Discord d'iStuces : https://tinyurl.com/iStuces-Discord
+...en rejoignant mon serveur Discord : https://tinyurl.com/iStuces-Discord
 
-...en vous abonnant à la chaine YouTube @istuces23 : https://youtube.com/@istuces23
+...en vous abonnant à ma chaine YouTube @istuces23 : https://youtube.com/@istuces23
